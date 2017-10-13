@@ -115,9 +115,9 @@
                 android:textColor="@android:color/white"
                 android:textSize="15.0sp"/>
 
-            <!--温度信息-->
+            <!--当前温度信息-->
             <TextView
-                android:id="@+id/temperature"
+                android:id="@+id/nowtemperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -125,9 +125,10 @@
                 android:layout_marginLeft="15.0dip"
                 android:layout_marginTop="5.0dip"
                 android:singleLine="true"
-                android:text="温度：21℃"
+                android:text="当前温度：7°C"
                 android:textColor="@android:color/white"
                 android:textSize="15.0sp"/>
+
 
             <!--PM2.5整体信息块-->
             <LinearLayout
@@ -189,7 +190,7 @@
                     android:id="@+id/pm2_5_quality"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
+                    android:gravity="center"
                     android:singleLine="true"
                     android:text="轻度污染"
                     android:textColor="@android:color/white"
@@ -208,8 +209,8 @@
                 <!-- 天气情况图片示例 -->
                 <ImageView
                     android:id="@+id/weather_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_alignParentLeft="true"
                     android:src="@drawable/biz_plugin_weather_qing"/>
 
