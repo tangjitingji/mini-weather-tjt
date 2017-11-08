@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mUpdateBtn = (ImageView) findViewById(R.id.title_update_btn);
         mUpdateBtn.setOnClickListener(this);
 
+
         /*if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
             Log.d("myWeather", "网络OK");
             Toast.makeText(MainActivity.this, "网络OK!", Toast.LENGTH_LONG).show();
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         if (view.getId() == R.id.title_city_manager){
-            Intent i = new Intent(this,SelectCity.class);
+            Intent i = new Intent(this,SelectCityActivity.class);
             //startActivity(i);
             startActivityForResult(i,1);
         }
@@ -404,6 +405,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         climateTv.setText("N/A");
         windTv.setText("N/A");
     }
+
 
     void updateTodayWeather(TodayWeather todayWeather){
         city_name_Tv.setText(todayWeather.getCity()+"天气");

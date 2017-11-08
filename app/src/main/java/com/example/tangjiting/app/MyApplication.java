@@ -30,6 +30,7 @@ public class MyApplication extends Application{
         super.onCreate();
         Log.d(TAG,"MyApplication->OnCreate");
         mApplication = this;
+        //打开数据库
         mCityDB = openCityDB();
         initCityList();
     }
@@ -46,6 +47,7 @@ public class MyApplication extends Application{
     }
 
     private boolean prepareCityList() {
+        //获取到所有城市的集合
         mCityList = mCityDB.getAllCity();
         int i=0;
         for (City city : mCityList) {
@@ -66,7 +68,14 @@ public class MyApplication extends Application{
         return  mApplication;
     }
 
+
+    public CityDB getmCityDB(){
+        return mCityDB;
+    }
+
+    //初始化数据库的方法
     private CityDB openCityDB(){
+        //构建在手机内部存储中的路径
         String path = "/data"
                 + Environment.getDataDirectory().getAbsolutePath()
                 + File.separator + getPackageName()
